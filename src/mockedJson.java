@@ -9,7 +9,6 @@ public class mockedJson {
 
 	public static void main(String[] args) {
 
-		int totalAmount = 0;
 		String copiesTitle = "RPA";
 		JsonPath js = new JsonPath(payload.complexJson()); // this is a mocked response
 
@@ -28,17 +27,17 @@ public class mockedJson {
 		// Print All course titles and their respective Prices
 		for (int i = 0; i < coursesCount; i++) {
 			String titleCourses = js.get("courses[" + i + "].title");
-			int prices = js.getInt("courses[" + i + "].price");
-			int copies = js.getInt("courses[" + i + "].copies");
-			totalAmount += prices;
-			System.out.println(" Print Title & price of each course: " + titleCourses + " ,Price " + prices);
 
+			int copies = js.getInt("courses[" + i + "].copies");
+		
+			
 			// Print no of copies sold by RPA Course
 			theCopies(copiesTitle, titleCourses, copies, i);
 		}
 
-		// Verify if Sum of all Course prices matches with Purchase Amount
-		Assert.assertEquals(purchaseAmount, totalAmount);
+		//Verify if Sum of all Course prices*copies matches with Purchase Amount
+				totalPricesValidation.sumOfCourses();
+				totalPricesValidation.titleAndPrice();
 
 	}
 
@@ -46,7 +45,7 @@ public class mockedJson {
 	public static void theCopies(String copiesTitle, String titleCourses, int copies, int i) {
 		String copiesMsg = "";
 		if (titleCourses.equalsIgnoreCase(copiesTitle)) { // for some reason we cannot use here "=="
-			copiesMsg = ("The number of  copies is " + copies);
+			copiesMsg = ("The number of  copies of " + copiesTitle +" is: " + copies);
 			System.out.println(copiesMsg);
 		}
 		return;

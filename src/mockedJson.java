@@ -3,15 +3,16 @@ import java.io.FileInputStream;
 import org.testng.Assert;
 
 import files.payload;
+import files.totalPricesValidation;
 import io.restassured.path.json.JsonPath;
 
 public class mockedJson {
 
 	public static void main(String[] args) {
 
-		String copiesTitle = "RPA";
 		JsonPath js = new JsonPath(payload.complexJson()); // this is a mocked response
-
+		String copiesTitle = "RPA";
+		int totalAmount = 0;
 		// Print No of courses returned by API
 		int coursesCount = js.getInt("courses.size()");
 		System.out.println(" No. of courses returned by API: " + coursesCount);
@@ -24,28 +25,25 @@ public class mockedJson {
 		String titleCourse1 = js.get("courses[0].title");
 		System.out.println(" Print Title of the first course: " + titleCourse1);
 
-		// Print All course titles and their respective Prices
+		totalPricesValidation<?> theValidations = new totalPricesValidation<Object>();
+		// Verify if Sum of all Course prices*copies matches with Purchase Amount
+		theValidations.sumOfCourses(coursesCount, purchaseAmount, totalAmount);
+		// Print Title of each course
+		theValidations.titleAndPrice(coursesCount);
+
+		// Print no of copies sold by RPA Course
 		for (int i = 0; i < coursesCount; i++) {
 			String titleCourses = js.get("courses[" + i + "].title");
-
 			int copies = js.getInt("courses[" + i + "].copies");
-		
-			
-			// Print no of copies sold by RPA Course
 			theCopies(copiesTitle, titleCourses, copies, i);
 		}
-
-		//Verify if Sum of all Course prices*copies matches with Purchase Amount
-				totalPricesValidation.sumOfCourses();
-				totalPricesValidation.titleAndPrice();
-
 	}
 
 	// Static Method to check Copies
 	public static void theCopies(String copiesTitle, String titleCourses, int copies, int i) {
 		String copiesMsg = "";
 		if (titleCourses.equalsIgnoreCase(copiesTitle)) { // for some reason we cannot use here "=="
-			copiesMsg = ("The number of  copies of " + copiesTitle +" is: " + copies);
+			copiesMsg = ("The number of  copies of " + copiesTitle + " is: " + copies);
 			System.out.println(copiesMsg);
 		}
 		return;

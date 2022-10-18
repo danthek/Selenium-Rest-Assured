@@ -25,6 +25,8 @@ public class dynamicJson {
 		deleteBook(id); // here we call the delete method and send the id for it to delete it
 
 	}
+	
+	// Tip for readyn Json file url: .body(Files.readAllBytes(Paths.get("C:\\user\documents\thefile.json"))) 
 
 	// Delete
 

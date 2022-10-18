@@ -74,5 +74,6 @@
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Abraham/Documents/Danthek/Automated QA Tools/eclipse/plugins/org.testng_7.4.0.r202105021533.jar" sourcepath="C:/Users/Abraham/Documents/Danthek/Automated QA Tools/eclipse/plugins/org.testng.source_7.4.0.r202105021533.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

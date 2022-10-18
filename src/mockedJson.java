@@ -28,7 +28,7 @@ public class mockedJson {
 		totalPricesValidation<?> theValidations = new totalPricesValidation<Object>();
 		// Verify if Sum of all Course prices*copies matches with Purchase Amount
 		theValidations.sumOfCourses(coursesCount, purchaseAmount, totalAmount);
-		// Print Title of each course
+		// Print Title and price of each course
 		theValidations.titleAndPrice(coursesCount);
 
 		// Print no of copies sold by RPA Course

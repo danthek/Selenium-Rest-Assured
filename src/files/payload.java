@@ -46,4 +46,16 @@ public class payload {
 				+ "}\r\n"
 				+ "";
 	}
+	
+	public static String bookAdd(String isbn, String aisle) { 
+		// different than the previous methods, this time we can store and return the whole JSON body inside a single variable
+		String jsonVariable= "{\r\n"
+				+ "\"name\":\"Learn Appium Automation with Java\",\r\n"
+				+ "\"isbn\":\""+ isbn +"\",\r\n"
+				+ "\"aisle\":\""+ aisle +"\",\r\n"
+				+ "\"author\":\"John foer\"\r\n"
+				+ "}\r\n"
+				+ "";
+	return jsonVariable;
+	}
 }

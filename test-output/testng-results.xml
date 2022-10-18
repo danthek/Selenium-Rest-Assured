@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-17T14:24:14 CDT" name="Default suite" finished-at="2022-10-17T14:24:15 CDT" duration-ms="1757">
+  <suite started-at="2022-10-18T14:13:20 CDT" name="Default suite" finished-at="2022-10-18T14:13:30 CDT" duration-ms="9324">
     <groups>
     </groups>
-    <test started-at="2022-10-17T14:24:14 CDT" name="Default test" finished-at="2022-10-17T14:24:15 CDT" duration-ms="1757">
-      <class name="files.totalPricesValidation">
-        <test-method signature="sumOfCourses(int,int,int,io.restassured.path.json.JsonPath)[pri:0, instance:files.totalPricesValidation@47faa49c]" started-at="2022-10-17T14:24:15 CDT" name="sumOfCourses" data-provider="getData" finished-at="2022-10-17T14:24:15 CDT" duration-ms="152" status="PASS">
+    <test started-at="2022-10-18T14:13:20 CDT" name="Default test" finished-at="2022-10-18T14:13:30 CDT" duration-ms="9324">
+      <class name="files.dynamicJson">
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:files.dynamicJson@5562c41e]" started-at="2022-10-18T14:13:20 CDT" name="addBook" data-provider="booksData" finished-at="2022-10-18T14:13:26 CDT" duration-ms="5284" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[3]]>
+                <![CDATA[etgj]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[910]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[io.restassured.path.json.JsonPath@16073fa8]]>
+                <![CDATA[4647]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sumOfCourses -->
-        <test-method signature="titleAndPrice()[pri:0, instance:files.totalPricesValidation@47faa49c]" started-at="2022-10-17T14:24:15 CDT" name="titleAndPrice" finished-at="2022-10-17T14:24:15 CDT" duration-ms="105" status="PASS">
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:files.dynamicJson@5562c41e]" started-at="2022-10-18T14:13:26 CDT" name="addBook" data-provider="booksData" finished-at="2022-10-18T14:13:28 CDT" duration-ms="2005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jtgi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8251]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- titleAndPrice -->
-      </class> <!-- files.totalPricesValidation -->
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:files.dynamicJson@5562c41e]" started-at="2022-10-18T14:13:28 CDT" name="addBook" data-provider="booksData" finished-at="2022-10-18T14:13:30 CDT" duration-ms="1975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fmpm]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8875]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- files.dynamicJson -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
